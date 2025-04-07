@@ -149,6 +149,7 @@ function constructDebuggingMsgContent(
     );
   }
   const semicolon: string = extensionProperties.addSemicolonInTheEnd ? ';' : '';
+  const separatorToUse: string = extensionProperties.replaceCommaByConcat ? ' +' : ',';
   const quoteToUse: string = debuggingMsgQuote(quote, selectedVar);
   return `${
     logFunction !== 'log' ? logFunction : `console.${logType}`
@@ -178,7 +179,7 @@ function constructDebuggingMsgContent(
           delimiterInsideMessage ? ` ${delimiterInsideMessage} ` : ' '
         }`
       : ''
-  }${selectedVar}${logMessageSuffix}${quoteToUse}, ${selectedVar})${semicolon}`;
+  }${selectedVar}${logMessageSuffix}${quoteToUse}${separatorToUse} ${selectedVar})${semicolon}`;
 }
 
 export function msg(

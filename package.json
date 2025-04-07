@@ -1,9 +1,9 @@
 {
-  "name": "turbo-console-log",
-  "displayName": "Turbo Console Log",
+  "name": "turbo-console-no-comma",
+  "displayName": "Turbo Console Log (No Comma)",
   "description": "Automating the process of writing meaningful log messages.",
   "version": "2.14.0",
-  "publisher": "ChakrounAnas",
+  "publisher": "val-brlt",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -24,6 +24,11 @@
       "type": "object",
       "title": "Turbo Console Log Configuration",
       "properties": {
+        "turboConsoleLog.replaceCommaByConcat": {
+          "type": "boolean",
+          "default": false,
+          "description": "If enabled, uses '+' instead of ',' in log statements.\n Example: console.log('var' + var) instead of console.log('var', var)."
+        },
         "turboConsoleLog.wrapLogMessage": {
           "type": "boolean",
           "default": false,

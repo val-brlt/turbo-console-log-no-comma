@@ -65,6 +65,7 @@ function getExtensionProperties(
   workspaceConfig: vscode.WorkspaceConfiguration,
 ) {
   return {
+    replaceCommaByConcat: workspaceConfig.replaceCommaByConcat ?? false,
     wrapLogMessage: workspaceConfig.wrapLogMessage ?? false,
     logMessagePrefix: workspaceConfig.logMessagePrefix ?? '🚀',
     logMessageSuffix: workspaceConfig.logMessageSuffix ?? ':',

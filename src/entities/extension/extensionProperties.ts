@@ -1,4 +1,5 @@
 export type ExtensionProperties = {
+  replaceCommaByConcat: boolean;
   wrapLogMessage: boolean;
   logMessagePrefix: string;
   logMessageSuffix: string;
